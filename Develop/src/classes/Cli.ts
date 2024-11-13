@@ -8,8 +8,8 @@ import Vehicle from "./Vehicle.js";
 
 // define the Cli class
 class Cli {
-  // TODO: update the vehicles property to accept Truck and Motorbike objects as well *
-  // TODO: You will need to use the Union operator to define additional types for the array *
+  // update the vehicles property to accept Truck and Motorbike objects as well *
+  // You will need to use the Union operator to define additional types for the array *
   // TODO: See the AbleToTow interface for an example of how to use the Union operator *
   vehicles: (Truck | Motorbike | Car)[];
   selectedVehicleVin: string | undefined;
@@ -279,13 +279,12 @@ class Cli {
         this.selectedVehicleVin = motorbike.vin;
   
         // Perform actions on the motorbike (e.g., display its details)
-        console.log('Motorbike created:', motorbike);
-        // You can add more actions here as needed
+        this.performActions();
       });
   }
 
   // method to find a vehicle to tow
-  // TODO: add a parameter to accept a truck object ????
+  // TODO: add a parameter to accept a truck object 
   processVehicle(vehicle: Vehicle): void {
     if (vehicle instanceof Truck) {
       // Handle truck-specific logic
